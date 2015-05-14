@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0679B3B1F0FCECE3A1A5728D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECDDE8673D50544D415ED2A /* libPods.a */; };
 		40B504A71B04922C00E03B34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504A61B04922C00E03B34 /* main.m */; };
 		40B504AA1B04922C00E03B34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504A91B04922C00E03B34 /* AppDelegate.m */; };
 		40B504AD1B04922C00E03B34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504AC1B04922C00E03B34 /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2251E6B00D23373F79D148FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		40B504A11B04922C00E03B34 /* 20° for Nest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20° for Nest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B504A51B04922C00E03B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B504A61B04922C00E03B34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		40B504BA1B04922C00E03B34 /* 20° for NestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20° for NestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B504BF1B04922C00E03B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B504C01B04922C00E03B34 /* _0__for_NestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _0__for_NestTests.m; sourceTree = "<group>"; };
+		BECDDE8673D50544D415ED2A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4F331F32B8FFF846BA39E9E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0679B3B1F0FCECE3A1A5728D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0592DC82C49C31CE1C37A052 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BECDDE8673D50544D415ED2A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0994326556F661B62C8AAB51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2251E6B00D23373F79D148FF /* Pods.debug.xcconfig */,
+				E4F331F32B8FFF846BA39E9E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		40B504981B04922C00E03B34 = {
 			isa = PBXGroup;
 			children = (
 				40B504A31B04922C00E03B34 /* 20° for Nest */,
 				40B504BD1B04922C00E03B34 /* 20° for NestTests */,
 				40B504A21B04922C00E03B34 /* Products */,
+				0994326556F661B62C8AAB51 /* Pods */,
+				0592DC82C49C31CE1C37A052 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40B504C41B04922C00E03B34 /* Build configuration list for PBXNativeTarget "20° for Nest" */;
 			buildPhases = (
+				1D4A5731A04530F26B676613 /* Check Pods Manifest.lock */,
 				40B5049D1B04922C00E03B34 /* Sources */,
 				40B5049E1B04922C00E03B34 /* Frameworks */,
 				40B5049F1B04922C00E03B34 /* Resources */,
+				30A8E4879EF8CAC3584F607A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +194,7 @@
 				TargetAttributes = {
 					40B504A01B04922C00E03B34 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 4DCBPTX47J;
 					};
 					40B504B91B04922C00E03B34 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -213,6 +240,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D4A5731A04530F26B676613 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		30A8E4879EF8CAC3584F607A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		40B5049D1B04922C00E03B34 /* Sources */ = {
@@ -345,8 +405,11 @@
 		};
 		40B504C51B04922C00E03B34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2251E6B00D23373F79D148FF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "20° for Nest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,8 +418,11 @@
 		};
 		40B504C61B04922C00E03B34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F331F32B8FFF846BA39E9E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "20° for Nest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +482,7 @@
 				40B504C61B04922C00E03B34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40B504C71B04922C00E03B34 /* Build configuration list for PBXNativeTarget "20° for NestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +491,7 @@
 				40B504C91B04922C00E03B34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

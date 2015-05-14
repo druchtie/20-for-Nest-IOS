@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <pop/POP.h>
 
 @interface ViewController ()
 
@@ -22,6 +23,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)popAnimations:(UIButton *)sender {
+    POPDecayAnimation *anim =[POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+    anim.velocity = @(1000.);
+    [sender.layer pop_addAnimation:anim forKey:@"slide"];
+
 }
 
 @end
