@@ -6,17 +6,18 @@
 //  Copyright (c) 2015 20°. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ControlViewController.h"
 #import <pop/POP.h>
 
-@interface ViewController ()
+@interface ControlViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ControlViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,7 +29,10 @@
     POPDecayAnimation *anim =[POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
     anim.velocity = @(1000.);
     [sender.layer pop_addAnimation:anim forKey:@"slide"];
+}
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

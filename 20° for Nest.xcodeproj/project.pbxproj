@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0679B3B1F0FCECE3A1A5728D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECDDE8673D50544D415ED2A /* libPods.a */; };
+		3D1C868A1B0D155C00586C62 /* CardView.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C86891B0D155C00586C62 /* CardView.h */; };
+		3D1C868C1B0D16A100586C62 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C86881B0D155C00586C62 /* CardView.m */; };
 		40B504A71B04922C00E03B34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504A61B04922C00E03B34 /* main.m */; };
 		40B504AA1B04922C00E03B34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504A91B04922C00E03B34 /* AppDelegate.m */; };
-		40B504AD1B04922C00E03B34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504AC1B04922C00E03B34 /* ViewController.m */; };
+		40B504AD1B04922C00E03B34 /* ControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504AC1B04922C00E03B34 /* ControlViewController.m */; };
 		40B504B01B04922C00E03B34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B504AE1B04922C00E03B34 /* Main.storyboard */; };
 		40B504B21B04922C00E03B34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B504B11B04922C00E03B34 /* Images.xcassets */; };
 		40B504B51B04922C00E03B34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B504B31B04922C00E03B34 /* LaunchScreen.xib */; };
@@ -29,13 +31,15 @@
 
 /* Begin PBXFileReference section */
 		2251E6B00D23373F79D148FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3D1C86881B0D155C00586C62 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardView.m; path = Views/CardView.m; sourceTree = "<group>"; };
+		3D1C86891B0D155C00586C62 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardView.h; path = Views/CardView.h; sourceTree = "<group>"; };
 		40B504A11B04922C00E03B34 /* 20° for Nest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20° for Nest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B504A51B04922C00E03B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B504A61B04922C00E03B34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40B504A81B04922C00E03B34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		40B504A91B04922C00E03B34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		40B504AB1B04922C00E03B34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		40B504AC1B04922C00E03B34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		40B504AB1B04922C00E03B34 /* ControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ControlViewController.h; path = Controllers/ControlViewController.h; sourceTree = "<group>"; };
+		40B504AC1B04922C00E03B34 /* ControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ControlViewController.m; path = Controllers/ControlViewController.m; sourceTree = "<group>"; };
 		40B504AF1B04922C00E03B34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40B504B11B04922C00E03B34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		40B504B41B04922C00E03B34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -82,6 +86,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3D1C86841B0D14CE00586C62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D1C86891B0D155C00586C62 /* CardView.h */,
+				3D1C86881B0D155C00586C62 /* CardView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3D1C86851B0D14E900586C62 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40B504AB1B04922C00E03B34 /* ControlViewController.h */,
+				40B504AC1B04922C00E03B34 /* ControlViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3D1C86861B0D150E00586C62 /* IB */ = {
+			isa = PBXGroup;
+			children = (
+				40B504AE1B04922C00E03B34 /* Main.storyboard */,
+				40B504B31B04922C00E03B34 /* LaunchScreen.xib */,
+			);
+			name = IB;
+			sourceTree = "<group>";
+		};
+		3D1C86871B0D151800586C62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				40B504B11B04922C00E03B34 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		40B504981B04922C00E03B34 = {
 			isa = PBXGroup;
 			children = (
@@ -105,14 +144,11 @@
 		40B504A31B04922C00E03B34 /* 20° for Nest */ = {
 			isa = PBXGroup;
 			children = (
-				40B504A81B04922C00E03B34 /* AppDelegate.h */,
-				40B504A91B04922C00E03B34 /* AppDelegate.m */,
-				40B504AB1B04922C00E03B34 /* ViewController.h */,
-				40B504AC1B04922C00E03B34 /* ViewController.m */,
-				40B504AE1B04922C00E03B34 /* Main.storyboard */,
-				40B504B11B04922C00E03B34 /* Images.xcassets */,
-				40B504B31B04922C00E03B34 /* LaunchScreen.xib */,
 				40B504A41B04922C00E03B34 /* Supporting Files */,
+				3D1C86871B0D151800586C62 /* Resources */,
+				3D1C86861B0D150E00586C62 /* IB */,
+				3D1C86851B0D14E900586C62 /* Controllers */,
+				3D1C86841B0D14CE00586C62 /* Views */,
 			);
 			path = "20° for Nest";
 			sourceTree = "<group>";
@@ -120,6 +156,8 @@
 		40B504A41B04922C00E03B34 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				40B504A81B04922C00E03B34 /* AppDelegate.h */,
+				40B504A91B04922C00E03B34 /* AppDelegate.m */,
 				40B504A51B04922C00E03B34 /* Info.plist */,
 				40B504A61B04922C00E03B34 /* main.m */,
 			);
@@ -279,8 +317,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B504AD1B04922C00E03B34 /* ViewController.m in Sources */,
+				40B504AD1B04922C00E03B34 /* ControlViewController.m in Sources */,
 				40B504AA1B04922C00E03B34 /* AppDelegate.m in Sources */,
+				3D1C868C1B0D16A100586C62 /* CardView.m in Sources */,
+				3D1C868A1B0D155C00586C62 /* CardView.h in Sources */,
 				40B504A71B04922C00E03B34 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
