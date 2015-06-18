@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CardView.h"
 
-@interface ControlViewController : UIViewController
+#import "TemperatureStateChangedProtocol.h"
 
+@interface ControlViewController : UIViewController <TemperaretureStateChanged>
+
+@property (strong, nonatomic) IBOutlet CardView *cardView;
+
+@property (strong, nonatomic) IBOutlet UILabel *stateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *mainTemperatureLabel;
+@property (strong, nonatomic) IBOutlet UILabel *subsubTemperatureLabel;
+
+- (void)swipedUp:(UISwipeGestureRecognizer*)recognizer;
+- (void)swipedDown:(UISwipeGestureRecognizer*)recognizer;
 
 @end
 

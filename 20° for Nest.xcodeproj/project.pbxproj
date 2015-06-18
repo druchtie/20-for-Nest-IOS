@@ -10,6 +10,7 @@
 		0679B3B1F0FCECE3A1A5728D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECDDE8673D50544D415ED2A /* libPods.a */; };
 		3D1C868A1B0D155C00586C62 /* CardView.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C86891B0D155C00586C62 /* CardView.h */; };
 		3D1C868C1B0D16A100586C62 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C86881B0D155C00586C62 /* CardView.m */; };
+		3DD6E6FA1B3336F00033692B /* TemperatureStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD6E6F91B3336F00033692B /* TemperatureStateManager.m */; };
 		40B504A71B04922C00E03B34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504A61B04922C00E03B34 /* main.m */; };
 		40B504AA1B04922C00E03B34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504A91B04922C00E03B34 /* AppDelegate.m */; };
 		40B504AD1B04922C00E03B34 /* ControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504AC1B04922C00E03B34 /* ControlViewController.m */; };
@@ -33,6 +34,9 @@
 		2251E6B00D23373F79D148FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3D1C86881B0D155C00586C62 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardView.m; path = Views/CardView.m; sourceTree = "<group>"; };
 		3D1C86891B0D155C00586C62 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardView.h; path = Views/CardView.h; sourceTree = "<group>"; };
+		3DD6E6F81B3336F00033692B /* TemperatureStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureStateManager.h; sourceTree = "<group>"; };
+		3DD6E6F91B3336F00033692B /* TemperatureStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureStateManager.m; sourceTree = "<group>"; };
+		3DD6E6FB1B333CBB0033692B /* TemperatureStateChangedProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemperatureStateChangedProtocol.h; sourceTree = "<group>"; };
 		40B504A11B04922C00E03B34 /* 20° for Nest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20° for Nest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B504A51B04922C00E03B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B504A61B04922C00E03B34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -121,6 +125,16 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		3DD6E6F71B3336DC0033692B /* TemperatureManager */ = {
+			isa = PBXGroup;
+			children = (
+				3DD6E6F81B3336F00033692B /* TemperatureStateManager.h */,
+				3DD6E6F91B3336F00033692B /* TemperatureStateManager.m */,
+				3DD6E6FB1B333CBB0033692B /* TemperatureStateChangedProtocol.h */,
+			);
+			name = TemperatureManager;
+			sourceTree = "<group>";
+		};
 		40B504981B04922C00E03B34 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +158,7 @@
 		40B504A31B04922C00E03B34 /* 20° for Nest */ = {
 			isa = PBXGroup;
 			children = (
+				3DD6E6F71B3336DC0033692B /* TemperatureManager */,
 				40B504A41B04922C00E03B34 /* Supporting Files */,
 				3D1C86871B0D151800586C62 /* Resources */,
 				3D1C86861B0D150E00586C62 /* IB */,
@@ -317,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD6E6FA1B3336F00033692B /* TemperatureStateManager.m in Sources */,
 				40B504AD1B04922C00E03B34 /* ControlViewController.m in Sources */,
 				40B504AA1B04922C00E03B34 /* AppDelegate.m in Sources */,
 				3D1C868C1B0D16A100586C62 /* CardView.m in Sources */,
