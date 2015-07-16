@@ -18,6 +18,12 @@
 
 @implementation ControlViewController {
     TemperatureStateManager *_temperatureManager;
+    
+    CGPoint _initialTouchPoint;
+    
+    CGFloat _travelledDistance;
+    CGFloat _offsetDistance;
+    
 }
 
 - (instancetype)init {
@@ -35,6 +41,9 @@
 
     _temperatureManager = [TemperatureStateManager new];
     [_temperatureManager setTemperatureStateDelegate:self];
+    
+    _offsetDistance = 15.f;
+    _travelledDistance = 0.f;
     [self setupSwipeGestures:_temperatureManager];
 }
 
@@ -50,13 +59,10 @@
 
 #pragma mark - swipe management
 - (void)setupSwipeGestures:(TemperatureStateManager *)manager {
-    UISwipeGestureRecognizer *swipeUpRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedUp:)];
-    swipeUpRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
-    [self.view addGestureRecognizer:swipeUpRecognizer];
-    
-    UISwipeGestureRecognizer *swipeDownRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedDown:)];
-    swipeDownRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
-    [self.view addGestureRecognizer:swipeDownRecognizer];
+    UIGestureRecognizer *swipeUpRecognizer = [[UIGestureRecognizer alloc] init];
+    [swipeUpRecognizer setDelaysTouchesEnded:NO];
+    [swipeUpRecognizer setDelegate:self];
+    [_cardView addGestureRecognizer:swipeUpRecognizer];
 }
 
 - (void)stateChangedInDirection:(TemperatureChangeDirection)direction
@@ -83,12 +89,35 @@
     }
 }
 
-- (void)swipedUp:(UISwipeGestureRecognizer*)recognizer {
-    [_temperatureManager stateChange:UP];
+#pragma mark - UIGestureRecogniser delegate
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    _initialTouchPoint = [[touches anyObject] locationInView:self.view];
+    [super touchesBegan:touches withEvent:event];
 }
 
-- (void)swipedDown:(UISwipeGestureRecognizer*)recognizer {
-    [_temperatureManager stateChange:DOWN];
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint movePoint = [touch locationInView:self.view];
+    CGFloat distanceY = movePoint.y - _initialTouchPoint.y;
+   
+    if ((distanceY > 0.f && _travelledDistance < 0.f) || (distanceY < 0.f && _travelledDistance > 0.f)) {
+        _travelledDistance = 0.f;
+    }
+    _travelledDistance += distanceY;
+    if (_travelledDistance > _offsetDistance) {
+        [_temperatureManager stateChange:DOWN];
+        _travelledDistance = 0.f;
+    } else if (_travelledDistance < -_offsetDistance) {
+        [_temperatureManager stateChange:UP];
+        _travelledDistance = 0.f;
+    }
+    _initialTouchPoint = [touch locationInView:self.view];
+    [super touchesMoved:touches withEvent:event];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    _initialTouchPoint = CGPointZero;
+    [super touchesEnded:touches withEvent:event];
 }
 
 @end
