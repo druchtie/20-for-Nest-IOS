@@ -11,6 +11,8 @@
 		3D1C868A1B0D155C00586C62 /* CardView.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C86891B0D155C00586C62 /* CardView.h */; };
 		3D1C868C1B0D16A100586C62 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C86881B0D155C00586C62 /* CardView.m */; };
 		3DD6E6FA1B3336F00033692B /* TemperatureStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD6E6F91B3336F00033692B /* TemperatureStateManager.m */; };
+		3DFD72271B583D7A00BC2E02 /* LoginWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD72251B583D7A00BC2E02 /* LoginWebViewController.m */; };
+		3DFD722F1B584CFF00BC2E02 /* NSURL+QueryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD722E1B584CFF00BC2E02 /* NSURL+QueryParser.m */; };
 		40B504A71B04922C00E03B34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504A61B04922C00E03B34 /* main.m */; };
 		40B504AA1B04922C00E03B34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504A91B04922C00E03B34 /* AppDelegate.m */; };
 		40B504AD1B04922C00E03B34 /* ControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B504AC1B04922C00E03B34 /* ControlViewController.m */; };
@@ -37,6 +39,10 @@
 		3DD6E6F81B3336F00033692B /* TemperatureStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureStateManager.h; sourceTree = "<group>"; };
 		3DD6E6F91B3336F00033692B /* TemperatureStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureStateManager.m; sourceTree = "<group>"; };
 		3DD6E6FB1B333CBB0033692B /* TemperatureStateChangedProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemperatureStateChangedProtocol.h; sourceTree = "<group>"; };
+		3DFD72241B583D7A00BC2E02 /* LoginWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWebViewController.h; sourceTree = "<group>"; };
+		3DFD72251B583D7A00BC2E02 /* LoginWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginWebViewController.m; sourceTree = "<group>"; };
+		3DFD722D1B584CFF00BC2E02 /* NSURL+QueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryParser.h"; sourceTree = "<group>"; };
+		3DFD722E1B584CFF00BC2E02 /* NSURL+QueryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryParser.m"; sourceTree = "<group>"; };
 		40B504A11B04922C00E03B34 /* 20° for Nest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20° for Nest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B504A51B04922C00E03B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B504A61B04922C00E03B34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 			children = (
 				40B504AB1B04922C00E03B34 /* ControlViewController.h */,
 				40B504AC1B04922C00E03B34 /* ControlViewController.m */,
+				3DFD72241B583D7A00BC2E02 /* LoginWebViewController.h */,
+				3DFD72251B583D7A00BC2E02 /* LoginWebViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +143,15 @@
 			name = TemperatureManager;
 			sourceTree = "<group>";
 		};
+		3DFD72291B584C7E00BC2E02 /* Catagories */ = {
+			isa = PBXGroup;
+			children = (
+				3DFD722D1B584CFF00BC2E02 /* NSURL+QueryParser.h */,
+				3DFD722E1B584CFF00BC2E02 /* NSURL+QueryParser.m */,
+			);
+			name = Catagories;
+			sourceTree = "<group>";
+		};
 		40B504981B04922C00E03B34 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +175,7 @@
 		40B504A31B04922C00E03B34 /* 20° for Nest */ = {
 			isa = PBXGroup;
 			children = (
+				3DFD72291B584C7E00BC2E02 /* Catagories */,
 				3DD6E6F71B3336DC0033692B /* TemperatureManager */,
 				40B504A41B04922C00E03B34 /* Supporting Files */,
 				3D1C86871B0D151800586C62 /* Resources */,
@@ -332,8 +350,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFD722F1B584CFF00BC2E02 /* NSURL+QueryParser.m in Sources */,
 				3DD6E6FA1B3336F00033692B /* TemperatureStateManager.m in Sources */,
 				40B504AD1B04922C00E03B34 /* ControlViewController.m in Sources */,
+				3DFD72271B583D7A00BC2E02 /* LoginWebViewController.m in Sources */,
 				40B504AA1B04922C00E03B34 /* AppDelegate.m in Sources */,
 				3D1C868C1B0D16A100586C62 /* CardView.m in Sources */,
 				3D1C868A1B0D155C00586C62 /* CardView.h in Sources */,
@@ -465,10 +485,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "20° for Nest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "98374d1b-bf76-4d92-a985-2988782fae7e";
 			};
 			name = Debug;
 		};
@@ -478,10 +499,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "20° for Nest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "98374d1b-bf76-4d92-a985-2988782fae7e";
 			};
 			name = Release;
 		};
@@ -489,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -500,6 +523,7 @@
 				INFOPLIST_FILE = "20° for NestTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "98374d1b-bf76-4d92-a985-2988782fae7e";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20° for Nest.app/20° for Nest";
 			};
 			name = Debug;
@@ -508,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -515,6 +540,7 @@
 				INFOPLIST_FILE = "20° for NestTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "98374d1b-bf76-4d92-a985-2988782fae7e";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20° for Nest.app/20° for Nest";
 			};
 			name = Release;

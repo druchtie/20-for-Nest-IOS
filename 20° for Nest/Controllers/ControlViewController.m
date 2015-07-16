@@ -12,6 +12,8 @@
 
 #import "UIColor+Expanded.h"
 
+#import "LoginWebViewController.h"
+
 @interface ControlViewController ()
 
 @end
@@ -24,12 +26,14 @@
     CGFloat _travelledDistance;
     CGFloat _offsetDistance;
     
+    BOOL hasCode;
+    
 }
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-
+        hasCode = NO;
     }
     return self;
 }
@@ -84,7 +88,7 @@
         [self.cardView setBackgroundColor:[UIColor colorWithHexString:@"#050505"]];
         [self.stateLabel setText:@"NORMAL"];
     } else {
-        [self.cardView setBackgroundColor:[UIColor colorWithHexString:@"#E63117"]];
+        [self.cardView setBackgroundColor:[UIColor colorWithHexString:@"#e25519"]];
         [self.stateLabel setText:@"HEATING"];
     }
 }
